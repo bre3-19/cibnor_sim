@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/cibnor_sim/cibnor_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/cibnor_sim/cibnor_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/cibnor_sim/cibnor_sim.egg-info/entry_points.txt
+writing requirements to ../../build/cibnor_sim/cibnor_sim.egg-info/requires.txt
+writing top-level names to ../../build/cibnor_sim/cibnor_sim.egg-info/top_level.txt
+reading manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+copying cibnor_sim/webots_robot_driver.py -> /home/cibnor/ros2_ws/build/cibnor_sim/build/lib/cibnor_sim
+running install
+running install_lib
+copying /home/cibnor/ros2_ws/build/cibnor_sim/build/lib/cibnor_sim/webots_robot_driver.py -> /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim
+byte-compiling /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/webots_robot_driver.py to webots_robot_driver.cpython-310.pyc
+running install_data
+copying worlds/Greenhouse.wbt -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds
+copying resource/robot_dist_sensor.urdf -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+error: can't copy 'resource/cinor_sim.urdf': doesn't exist or not a regular file

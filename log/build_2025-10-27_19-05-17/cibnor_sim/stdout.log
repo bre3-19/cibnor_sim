@@ -1,0 +1,21 @@
+running develop
+running egg_info
+writing cibnor_sim.egg-info/PKG-INFO
+writing dependency_links to cibnor_sim.egg-info/dependency_links.txt
+writing entry points to cibnor_sim.egg-info/entry_points.txt
+writing requirements to cibnor_sim.egg-info/requires.txt
+writing top-level names to cibnor_sim.egg-info/top_level.txt
+reading manifest file 'cibnor_sim.egg-info/SOURCES.txt'
+writing manifest file 'cibnor_sim.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor-sim.egg-link (link to .)
+Installing robot_driver script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+
+Installed /home/cibnor/ros2_ws/build/cibnor_sim
+running symlink_data
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/resource/cibnor_sim -> /home/cibnor/ros2_ws/install/cibnor_sim/share/ament_index/resource_index/packages
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/config/cibnor_sim.yaml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/config
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/launch/robot_launch.py -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/worlds/Greenhouse.wbt -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/resource/robot.urdf -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/package.xml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim

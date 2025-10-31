@@ -1,0 +1,23 @@
+[0.671s] Invoking command in '/home/cibnor/ros2_ws/build/cibnor_sim': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cibnor/ros2_ws/build/cibnor_sim/build --no-deps symlink_data --force
+[0.943s] running develop
+[1.121s] running egg_info
+[1.121s] writing cibnor_sim.egg-info/PKG-INFO
+[1.121s] writing dependency_links to cibnor_sim.egg-info/dependency_links.txt
+[1.122s] writing entry points to cibnor_sim.egg-info/entry_points.txt
+[1.122s] writing requirements to cibnor_sim.egg-info/requires.txt
+[1.122s] writing top-level names to cibnor_sim.egg-info/top_level.txt
+[1.124s] reading manifest file 'cibnor_sim.egg-info/SOURCES.txt'
+[1.125s] writing manifest file 'cibnor_sim.egg-info/SOURCES.txt'
+[1.126s] running build_ext
+[1.126s] Creating /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor-sim.egg-link (link to .)
+[1.127s] Installing robot_driver script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+[1.127s] 
+[1.127s] Installed /home/cibnor/ros2_ws/build/cibnor_sim
+[1.128s] running symlink_data
+[1.128s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/resource/cibnor_sim -> /home/cibnor/ros2_ws/install/cibnor_sim/share/ament_index/resource_index/packages
+[1.128s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/config/cibnor_sim.yaml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/config
+[1.128s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/launch/robot_launch.py -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch
+[1.129s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/worlds/Greenhouse.wbt -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds
+[1.129s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/resource/robot.urdf -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+[1.129s] symbolically linking /home/cibnor/ros2_ws/build/cibnor_sim/package.xml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim
+[1.159s] Invoked command in '/home/cibnor/ros2_ws/build/cibnor_sim' returned '0': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cibnor/ros2_ws/build/cibnor_sim/build --no-deps symlink_data --force

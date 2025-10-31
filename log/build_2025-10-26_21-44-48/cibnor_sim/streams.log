@@ -1,0 +1,34 @@
+[0.996s] Invoking command in '/home/cibnor/ros2_ws/build/cibnor_sim': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/cibnor/ros2_ws/build/cibnor_sim/build
+[1.469s] running develop
+[1.756s] Removing /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor-sim.egg-link (link to .)
+[1.801s] Invoked command in '/home/cibnor/ros2_ws/build/cibnor_sim' returned '0': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/cibnor/ros2_ws/build/cibnor_sim/build
+[1.804s] Invoking command in '/home/cibnor/ros2_ws/src/cibnor_sim': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cibnor_sim build --build-base /home/cibnor/ros2_ws/build/cibnor_sim/build install --record /home/cibnor/ros2_ws/build/cibnor_sim/install.log --single-version-externally-managed install_data --force
+[2.186s] running egg_info
+[2.186s] writing ../../build/cibnor_sim/cibnor_sim.egg-info/PKG-INFO
+[2.187s] writing dependency_links to ../../build/cibnor_sim/cibnor_sim.egg-info/dependency_links.txt
+[2.187s] writing entry points to ../../build/cibnor_sim/cibnor_sim.egg-info/entry_points.txt
+[2.187s] writing requirements to ../../build/cibnor_sim/cibnor_sim.egg-info/requires.txt
+[2.188s] writing top-level names to ../../build/cibnor_sim/cibnor_sim.egg-info/top_level.txt
+[2.190s] reading manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+[2.191s] writing manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+[2.191s] running build
+[2.191s] running build_py
+[2.191s] copying cibnor_sim/webots_robot_driver.py -> /home/cibnor/ros2_ws/build/cibnor_sim/build/lib/cibnor_sim
+[2.191s] running install
+[2.192s] running install_lib
+[2.193s] copying /home/cibnor/ros2_ws/build/cibnor_sim/build/lib/cibnor_sim/webots_robot_driver.py -> /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim
+[2.193s] copying /home/cibnor/ros2_ws/build/cibnor_sim/build/lib/cibnor_sim/__init__.py -> /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim
+[2.193s] byte-compiling /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/webots_robot_driver.py to webots_robot_driver.cpython-310.pyc
+[2.194s] byte-compiling /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__init__.py to __init__.cpython-310.pyc
+[2.194s] running install_data
+[2.194s] copying resource/cibnor_sim -> /home/cibnor/ros2_ws/install/cibnor_sim/share/ament_index/resource_index/packages
+[2.195s] copying launch/robot_launch.py -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch
+[2.195s] copying worlds/Greenhouse.wbt -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds
+[2.195s] copying resource/robot.urdf -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+[2.195s] copying package.xml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim
+[2.195s] running install_egg_info
+[2.198s] Copying ../../build/cibnor_sim/cibnor_sim.egg-info to /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info
+[2.199s] running install_scripts
+[2.225s] Installing robot_driver script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+[2.225s] writing list of installed files to '/home/cibnor/ros2_ws/build/cibnor_sim/install.log'
+[2.289s] Invoked command in '/home/cibnor/ros2_ws/src/cibnor_sim' returned '0': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cibnor_sim build --build-base /home/cibnor/ros2_ws/build/cibnor_sim/build install --record /home/cibnor/ros2_ws/build/cibnor_sim/install.log --single-version-externally-managed install_data --force

@@ -1,0 +1,280 @@
+<?xml version="1.0" ?>
+<robot name="robot">
+
+    <webots>
+        <device reference="lidar" type="lidar">
+            <ros>
+                <enabled>true</enabled>
+                <updateRate>10</updateRate>
+                <topicName>/scan</topicName>
+                <alwaysOn>true</alwaysOn>
+                <frameName>lidar</frameName>
+            </ros>
+        </device>
+
+        <plugin type="cibnor_sim.webots_robot_driver.RobotDriver"/>
+    </webots>
+
+    <!-- Colors -->
+    <material name="light_gray">
+        <color rgba="0.6 0.6 0.6 1.0"/>
+    </material>
+
+    <material name="gray">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <!-- Robot body -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.656 0.294 0.12"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.656 0.294 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!--Lidar-->
+    <joint name="base_link_to_support_Lidar" type="fixed">
+        <parent link="base_link"/>
+        <child link="support_Lidar"/>
+        <origin xyz="0 0 0.11" rpy="0 0 0"/>
+    </joint>
+
+    <link name="support_Lidar">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.02" length="0.15"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.02" length="0.15"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="support_Lidar_to_lidar" type="fixed">
+        <parent link="support_Lidar"/>
+        <child link="lidar"/>
+        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="lidar">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.035"/>
+            </geometry>
+            <material name="light_gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.035" length="0.035"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!--Hinges-->
+    <joint name="base_link_to_hinge_BL" type="fixed">
+        <parent link="base_link"/>
+        <child link="hinge_BL"/>
+        <origin xyz="-0.21 0.17 0" rpy="-1.5708 0 3.1416"/>
+    </joint>
+
+    <link name="hinge_BL">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="base_link_to_hinge_FL" type="fixed">
+        <parent link="base_link"/>
+        <child link="hinge_FL"/>
+        <origin xyz="0.27 0.17 0" rpy="0 0.707108 -0.707105"/>
+    </joint>
+
+    <link name="hinge_FL">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="base_link_to_hinge_BR" type="fixed">
+        <parent link="base_link"/>
+        <child link="hinge_BR"/>
+        <origin xyz="-0.21 -0.17 0" rpy="0 0.707108 -0.707105"/>
+    </joint>
+
+    <link name="hinge_BR">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="base_link_to_hinge_FR" type="fixed">
+        <parent link="base_link"/>
+        <child link="hinge_FR"/>
+        <origin xyz="0.27 -0.17 0" rpy="0 -1.5708 0"/>
+    </joint>
+
+    <link name="hinge_FR">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+            <material name="gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.055"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Front-Right Wheel -->
+    <joint name="motor_FR" type="continuous">
+        <parent link="hinge_FR"/>
+        <child link="wheel_FR"/>
+        <axis xyz="0 0 -1"/>
+        <limit effort="10" velocity="10"/>
+        <origin xyz="0.27 -0.25 0" rpy="1.57 0 0"/>
+    </joint>
+
+    <link name="wheel_FR">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Front-Left Wheel -->
+    <joint name="motor_FL" type="continuous">
+        <parent link="hinge_FL"/>
+        <child link="wheel_FL"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10" velocity="10"/>
+        <origin xyz="0.27 0.25 0" rpy="1.57 0 0"/>
+    </joint>
+
+    <link name="wheel_FL">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Back-Right Wheel -->
+    <joint name="motor_BR" type="continuous">
+        <parent link="hinge_BR"/>
+        <child link="wheel_BR"/>
+        <axis xyz="0 0 -1"/>
+        <limit effort="10" velocity="10"/>
+        <origin xyz="-0.21 -0.25 0" rpy="1.57 0 0"/>
+    </joint>
+
+    <link name="wheel_BR">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Back-Left Wheel -->
+    <joint name="motor_BL" type="continuous">
+        <parent link="hinge_BL"/>
+        <child link="wheel_BL"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10" velocity="10"/>
+        <origin xyz="-0.21 0.25 0" rpy="1.57 0 0"/>
+    </joint>
+
+    <link name="wheel_BL">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+</robot>

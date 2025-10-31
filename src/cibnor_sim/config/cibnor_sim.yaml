@@ -1,0 +1,15 @@
+robot:
+  type: "differential"
+  wheel_radius: 0.175
+  wheel_distance: 0.15
+  cmd_vel_topic: "/cmd_vel"
+  odom_topic: "/odom"
+  left_wheel:
+    - "motor_FL"
+    - "motor_BL"
+  right_wheel:
+    - "motor_FR"
+    - "motor_BR"
+  publish_tf: true
+  odom_frame: "odom"
+  base_frame: "body"

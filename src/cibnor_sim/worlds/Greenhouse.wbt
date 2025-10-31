@@ -1,0 +1,362 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material1 "wheel_Texture"
+      material2 "ground_Texture"
+      coulombFriction [
+        0.2
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.3558907182116143 0.2799164104241317 0.8916213321057826 1.9184300758549546
+  position -10.507897654358022 -1.5975009542291752 6.429743023202959
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  contactMaterial "ground_Texture"
+  floorSize 28 13
+  wallHeight 0.5
+}
+DEF robot Robot {
+  translation -12.703 5.24405 0.326043
+  rotation -0.023082965513420164 -0.9624837906889081 0.27035556100109465 0.010372442067381152
+  children [
+    DEF lidar Lidar {
+      translation 0 0 0.2
+      children [
+        DEF lidar Shape {
+          appearance PBRAppearance {
+            baseColor 0.6 0.6 0.6
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.035
+            radius 0.035
+          }
+        }
+      ]
+      boundingObject USE lidar
+      physics Physics {
+      }
+      fieldOfView 6.28
+      numberOfLayers 1
+      maxRange 2
+    }
+    DEF support_Lidar Solid {
+      translation 0 0 0.11
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0
+          }
+          geometry DEF support_Lidar Cylinder {
+            height 0.15
+            radius 0.02
+          }
+        }
+      ]
+      name "support_Lidar"
+      boundingObject USE support_Lidar
+      physics Physics {
+      }
+    }
+    DEF ds_R DistanceSensor {
+      translation 0.326 -0.05 0
+      rotation 0 0 -1 0.4499999999999997
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.01 0.02 0.01
+          }
+        }
+      ]
+      name "ds_R"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+      lookupTable [
+        0 1000 0
+        0.05 1000 0
+        0.3 0 0
+      ]
+      numberOfRays 2
+      aperture 0.85
+    }
+    DEF ds_L DistanceSensor {
+      translation 0.326 0.05 0
+      rotation 0 0 1 0.45
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.01 0.02 0.01
+          }
+        }
+      ]
+      name "ds_L"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+      lookupTable [
+        0 1000 0
+        0.05 1000 0
+        0.3 0 0
+      ]
+      numberOfRays 2
+      aperture 0.85
+    }
+    DEF wheel_FR HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 -1 0
+        anchor 0.27 -0.25 0
+      }
+      device [
+        RotationalMotor {
+          name "motor_FR"
+        }
+        DEF encoder_FR PositionSensor {
+          name "encoder_FR"
+        }
+      ]
+      endPoint DEF wheel_FR Solid {
+        translation 0.27 -0.25 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF wheel_FR Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.175
+              subdivision 12
+            }
+          }
+        ]
+        name "wheel_FR"
+        contactMaterial "wheel_Texture"
+        boundingObject USE wheel_FR
+        physics Physics {
+        }
+      }
+    }
+    DEF wheel_FL HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.27 0.25 0
+      }
+      device [
+        DEF motor_FL RotationalMotor {
+          name "motor_FL"
+        }
+        DEF encoder_FL PositionSensor {
+          name "encoder_FL"
+        }
+      ]
+      endPoint DEF wheel_FL Solid {
+        translation 0.27 0.25 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF wheel_FL Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.175
+              subdivision 12
+            }
+          }
+        ]
+        name "wheel_FL"
+        contactMaterial "wheel_Texture"
+        boundingObject USE wheel_FL
+        physics Physics {
+        }
+      }
+    }
+    DEF wheel_BR HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 -1 0
+        anchor -0.21 -0.25 0
+      }
+      device [
+        DEF motor_BR RotationalMotor {
+          name "motor_BR"
+        }
+        DEF encoder_BR PositionSensor {
+          name "encoder_BR"
+        }
+      ]
+      endPoint DEF wheel_BR Solid {
+        translation -0.21 -0.25 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF wheel_BR Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.175
+              subdivision 12
+            }
+          }
+        ]
+        name "wheel_BR"
+        contactMaterial "wheel_Texture"
+        boundingObject USE wheel_BR
+        physics Physics {
+        }
+      }
+    }
+    DEF wheel_BL HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.21 0.25 0
+      }
+      device [
+        DEF motor_BL RotationalMotor {
+          name "motor_BL"
+        }
+        DEF encoder_BR PositionSensor {
+          name "encoder_BL"
+        }
+      ]
+      endPoint DEF wheel_BL Solid {
+        translation -0.21 0.25 0
+        rotation 1 0 0 1.5708
+        children [
+          DEF wheel_BL Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.1
+              radius 0.175
+              subdivision 12
+            }
+          }
+        ]
+        name "wheel_BL"
+        contactMaterial "wheel_Texture"
+        boundingObject USE wheel_BL
+        physics Physics {
+        }
+      }
+    }
+    DEF hinge_BL Solid {
+      translation -0.21 0.17 0
+      rotation 0 0.70710528118436 -0.707108281185553 3.14159
+      children [
+        DEF hinge_BL Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.055
+            radius 0.01
+          }
+        }
+      ]
+      name "hinge_BL"
+      contactMaterial "wheel_Texture"
+      boundingObject USE hinge_BL
+      physics Physics {
+      }
+    }
+    DEF hinge_FL Solid {
+      translation 0.27 0.17 0
+      rotation 0 0.707108281185553 -0.70710528118436 3.14159
+      children [
+        DEF hinge_FL Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.055
+            radius 0.01
+          }
+        }
+      ]
+      name "hinge_FL"
+      boundingObject USE hinge_FL
+      physics Physics {
+      }
+    }
+    DEF hinge_BR Solid {
+      translation -0.21 -0.17 0
+      rotation 0 0.707108281185553 -0.70710528118436 3.14159
+      children [
+        DEF hinge_BR Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.055
+            radius 0.01
+          }
+        }
+      ]
+      name "hinge_BR"
+      boundingObject USE hinge_BR
+      physics Physics {
+      }
+    }
+    DEF hinge_FR Solid {
+      translation 0.27 -0.17 0
+      rotation 0 0.70710528118436 -0.707108281185553 3.14159
+      children [
+        DEF hinge_FR Shape {
+          appearance PBRAppearance {
+            baseColor 0.3 0.3 0.3
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.055
+            radius 0.01
+          }
+        }
+      ]
+      name "hinge_FR"
+      boundingObject USE hinge_FR
+      physics Physics {
+      }
+    }
+    DEF body Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.3
+        metalness 0
+      }
+      geometry Box {
+        size 0.656 0.294 0.12
+      }
+    }
+  ]
+  boundingObject USE body
+  physics Physics {
+  }
+  controller "<extern>"
+}

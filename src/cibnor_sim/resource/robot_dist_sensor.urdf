@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<robot name="robot">
+
+    <webots>
+        <device reference="ds_L" type="DistanceSensor">
+            <ros>
+                <topicName>/left_sensor</topicName>
+                <alwaysOn>true</alwaysOn>
+            </ros>
+        </device>
+        <device reference="ds_R" type="DistanceSensor">
+            <ros>
+                <topicName>/right_sensor</topicName>
+                <alwaysOn>true</alwaysOn>
+            </ros>
+        </device>
+        <plugin type="cibnor_sim.webots_robot_driver.RobotDriver"/>
+    </webots>
+    
+</robot>
