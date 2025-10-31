@@ -114,7 +114,7 @@
     <joint name="base_link_to_hinge_FL" type="fixed">
         <parent link="base_link"/>
         <child link="hinge_FL"/>
-        <origin xyz="0.27 0.17 0" rpy="0 0.707108 -0.707105"/>
+        <origin xyz="0.27 0.17 0" rpy="1.5708006 0.0000019 -3.1415908"/>
     </joint>
 
     <link name="hinge_FL">
@@ -136,7 +136,7 @@
     <joint name="base_link_to_hinge_BR" type="fixed">
         <parent link="base_link"/>
         <child link="hinge_BR"/>
-        <origin xyz="-0.21 -0.17 0" rpy="0 0.707108 -0.707105"/>
+        <origin xyz="-0.21 -0.17 0" rpy="1.5708006 0.0000019 -3.1415908"/>
     </joint>
 
     <link name="hinge_BR">
@@ -158,7 +158,7 @@
     <joint name="base_link_to_hinge_FR" type="fixed">
         <parent link="base_link"/>
         <child link="hinge_FR"/>
-        <origin xyz="0.27 -0.17 0" rpy="0 -1.5708 0"/>
+        <origin xyz="0.27 -0.17 0" rpy="1.5708006 0.0000019 -3.1415908"/>
     </joint>
 
     <link name="hinge_FR">
@@ -183,7 +183,7 @@
         <child link="wheel_FR"/>
         <axis xyz="0 0 -1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="0.27 -0.25 0" rpy="1.57 0 0"/>
+        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_FR">
@@ -208,7 +208,7 @@
         <child link="wheel_FL"/>
         <axis xyz="0 0 1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="0.27 0.25 0" rpy="1.57 0 0"/>
+        <origin xyz="0 0 0.08" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_FL">
@@ -233,7 +233,7 @@
         <child link="wheel_BR"/>
         <axis xyz="0 0 -1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="-0.21 -0.25 0" rpy="1.57 0 0"/>
+        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_BR">
@@ -258,7 +258,7 @@
         <child link="wheel_BL"/>
         <axis xyz="0 0 1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="-0.21 0.25 0" rpy="1.57 0 0"/>
+        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_BL">
