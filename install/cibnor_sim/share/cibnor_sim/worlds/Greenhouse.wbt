@@ -14,15 +14,15 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.35619974261639664 0.6348657967514669 -0.6856144422889136 1.3716359106742801
-  position -21.03861874567898 27.739368022124424 47.58598556700562
+  orientation -0.3107065747635156 0.023220289394424623 0.9502222069385471 2.99981230856076
+  position -8.280747996643871 3.178136391616564 2.9127100703274946
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 DEF robot Robot {
-  translation -12.2909 4.67541 1.29034
+  translation -10.3772 3.39082 1.30977
   rotation -0.023082965513420164 -0.9624837906889081 0.27035556100109465 0.010372442067381152
   children [
     DEF lidar Lidar {
@@ -135,16 +135,35 @@ DEF robot Robot {
         }
       ]
       endPoint DEF wheel_FR Solid {
-        translation 0.27 -0.25 0
+        translation 0.27 -0.21 7.34642e-08
         rotation 1 0 0 1.5708
         children [
+          Transform {
+            translation -1.09 -0.7325 0
+            rotation 1 0 0 1.5708
+            scale 0.01 0.01 0.01
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 0
+                  metalness 0
+                }
+                geometry Mesh {
+                  url [
+                    "wheel.stl"
+                  ]
+                }
+              }
+            ]
+          }
           DEF wheel_FR Shape {
             appearance PBRAppearance {
               baseColor 0 0 0
+              transparency 1
               metalness 0
             }
             geometry Cylinder {
-              height 0.1
+              height 0.095
               radius 0.175
               subdivision 12
             }
@@ -177,16 +196,35 @@ DEF robot Robot {
         }
       ]
       endPoint DEF wheel_FL Solid {
-        translation 0.27 0.25 0
+        translation 0.27 0.21 -1.46928e-07
         rotation 1 0 0 1.5708
         children [
+          Transform {
+            translation 1.09 -0.7325 0
+            rotation 3.3905113482557537e-09 -0.707108281185553 0.70710528118436 3.14159
+            scale 0.01 0.01 0.01
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 0
+                  metalness 0
+                }
+                geometry Mesh {
+                  url [
+                    "wheel.stl"
+                  ]
+                }
+              }
+            ]
+          }
           DEF wheel_FL Shape {
             appearance PBRAppearance {
               baseColor 0 0 0
+              transparency 1
               metalness 0
             }
             geometry Cylinder {
-              height 0.1
+              height 0.095
               radius 0.175
               subdivision 12
             }
@@ -219,16 +257,35 @@ DEF robot Robot {
         }
       ]
       endPoint DEF wheel_BR Solid {
-        translation -0.21 -0.25 0
+        translation -0.21 -0.21 0
         rotation 1 0 0 1.5708
         children [
+          Transform {
+            translation -1.09 -0.7325 0
+            rotation 1 0 0 1.5708
+            scale 0.01 0.01 0.01
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 0
+                  metalness 0
+                }
+                geometry Mesh {
+                  url [
+                    "wheel.stl"
+                  ]
+                }
+              }
+            ]
+          }
           DEF wheel_BR Shape {
             appearance PBRAppearance {
               baseColor 0 0 0
+              transparency 1
               metalness 0
             }
             geometry Cylinder {
-              height 0.1
+              height 0.095
               radius 0.175
               subdivision 12
             }
@@ -261,16 +318,35 @@ DEF robot Robot {
         }
       ]
       endPoint DEF wheel_BL Solid {
-        translation -0.21 0.25 0
+        translation -0.21 0.21 0
         rotation 1 0 0 1.5708
         children [
+          Transform {
+            translation 1.09 -0.7325 0
+            rotation 3.3905113482557537e-09 -0.707108281185553 0.70710528118436 3.14159
+            scale 0.01 0.01 0.01
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 0
+                  metalness 0
+                }
+                geometry Mesh {
+                  url [
+                    "wheel.stl"
+                  ]
+                }
+              }
+            ]
+          }
           DEF wheel_BL Shape {
             appearance PBRAppearance {
               baseColor 0 0 0
+              transparency 1
               metalness 0
             }
             geometry Cylinder {
-              height 0.1
+              height 0.095
               radius 0.175
               subdivision 12
             }

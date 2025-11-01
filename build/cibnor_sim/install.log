@@ -14,6 +14,7 @@
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_odometry_launch.py
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_rviz_launch.py
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds/Greenhouse.wbt
+/home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds/wheel.stl
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/urdf_view.rviz
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/lidar_scan.rviz
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/robot.urdf

@@ -13,6 +13,7 @@ data_files.append(('share/' + package_name + '/launch', ['launch/robot_odometry_
 data_files.append(('share/' + package_name + '/launch', ['launch/robot_rviz_launch.py']))
 ## World files
 data_files.append(('share/' + package_name + '/worlds', ['worlds/Greenhouse.wbt']))
+data_files.append(('share/' + package_name + '/worlds', ['worlds/wheel.stl']))
 ## Resource files
 data_files.append(('share/' + package_name + '/resource', ['resource/urdf_view.rviz']))
 data_files.append(('share/' + package_name + '/resource', ['resource/lidar_scan.rviz']))
