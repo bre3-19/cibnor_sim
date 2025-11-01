@@ -69,7 +69,7 @@
     <joint name="support_Lidar_to_lidar" type="fixed">
         <parent link="support_Lidar"/>
         <child link="lidar"/>
-        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+        <origin xyz="0 0 0.09" rpy="0 0 0"/>
     </joint>
 
     <link name="lidar">
@@ -92,7 +92,7 @@
     <joint name="base_link_to_hinge_BL" type="fixed">
         <parent link="base_link"/>
         <child link="hinge_BL"/>
-        <origin xyz="-0.21 0.17 0" rpy="-1.5708 0 3.1416"/>
+        <origin xyz="-0.21 0.17 0" rpy="1.5708006 0.0000019 -3.1415908"/>
     </joint>
 
     <link name="hinge_BL">
@@ -183,35 +183,10 @@
         <child link="wheel_FR"/>
         <axis xyz="0 0 -1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.1" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_FR">
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.175" length="0.1"/>
-            </geometry>
-            <material name="black"/>
-        </visual>
-        <collision>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <cylinder radius="0.175" length="0.1"/>
-            </geometry>
-        </collision>
-    </link>
-
-    <!-- Front-Left Wheel -->
-    <joint name="motor_FL" type="continuous">
-        <parent link="hinge_FL"/>
-        <child link="wheel_FL"/>
-        <axis xyz="0 0 1"/>
-        <limit effort="10" velocity="10"/>
-        <origin xyz="0 0 0.08" rpy="0 0 0"/>
-    </joint>
-
-    <link name="wheel_FL">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
@@ -233,10 +208,35 @@
         <child link="wheel_BR"/>
         <axis xyz="0 0 -1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.1" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_BR">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.175" length="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Front-Left Wheel -->
+    <joint name="motor_FL" type="continuous">
+        <parent link="hinge_FL"/>
+        <child link="wheel_FL"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10" velocity="10"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </joint>
+
+    <link name="wheel_FL">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
@@ -258,7 +258,7 @@
         <child link="wheel_BL"/>
         <axis xyz="0 0 1"/>
         <limit effort="10" velocity="10"/>
-        <origin xyz="0 0 -0.08" rpy="0 0 0"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
     </joint>
 
     <link name="wheel_BL">
@@ -276,5 +276,77 @@
             </geometry>
         </collision>
     </link>
+
+    <!-- Right sensor -->
+    <joint name="base_link_to_ds_R" type="fixed">
+        <parent link="base_link"/>
+        <child link="ds_R"/>
+        <origin xyz="0.326 -0.05 -0.05" rpy="0.1160253 0.2352153 -0.4637244"/>
+    </joint>
+
+    <link name="ds_R">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.02 0.01"/>
+            </geometry>
+            <material name="light_gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.02 0.01"/>
+            </geometry>
+        </collision>
+        <sensor name="ds_sensor_R" type="ray">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <range>
+                <min>0.05</min>
+                <max>0.15</max>
+                <resolution>0.001</resolution>
+            </range>
+            <noise>
+                <type>gaussian</type>
+                <mean>0</mean>
+                <stddev>0.02</stddev>
+            </noise>
+        </sensor>
+  </link>
+
+  <!-- Left sensor -->
+    <joint name="base_link_to_ds_L" type="fixed">
+        <parent link="base_link"/>
+        <child link="ds_L"/>
+        <origin xyz="0.326 0.05 -0.05" rpy="-0.1160253 0.2352153 0.4637244"/>
+    </joint>
+
+    <link name="ds_L">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.02 0.01"/>
+            </geometry>
+            <material name="light_gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.02 0.01"/>
+            </geometry>
+        </collision>
+        <sensor name="ds_sensor_L" type="ray">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <range>
+                <min>0.05</min>
+                <max>0.15</max>
+                <resolution>0.001</resolution>
+            </range>
+            <noise>
+                <type>gaussian</type>
+                <mean>0</mean>
+                <stddev>0.02</stddev>
+            </noise>
+        </sensor>
+  </link>
 
 </robot>

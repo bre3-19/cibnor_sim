@@ -15,8 +15,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.5173624218669182 0.45913774679755254 0.722169408037798 2.0017017164663318
-  position -11.896675296280113 3.4289848058333243 4.28487519315821
+  orientation -0.07657446572446949 0.0012145144354815862 0.9970631254608197 3.110004243581269
+  position -11.084297504559673 4.684814658325607 1.4273652300906046
 }
 TexturedBackground {
 }
@@ -67,8 +67,8 @@ DEF robot Robot {
       }
     }
     DEF ds_R DistanceSensor {
-      translation 0.326 -0.05 0
-      rotation 0 0 -1 0.4499999999999997
+      translation 0.326 -0.05 -0.05
+      rotation 0.11338396734723626 0.49539585733394 -0.861235751977919 0.519497
       children [
         DEF distance_sensor Shape {
           appearance PBRAppearance {
@@ -91,8 +91,8 @@ DEF robot Robot {
       aperture 0.85
     }
     DEF ds_L DistanceSensor {
-      translation 0.326 0.05 0
-      rotation 0 0 1 0.45
+      translation 0.326 0.05 -0.05
+      rotation -0.11338396734723623 0.49539585733393987 0.8612357519779188 0.5194969999999999
       children [
         DEF distance_sensor Shape {
           appearance PBRAppearance {

@@ -1,0 +1,24 @@
+[1.000s] Invoking command in '/home/cibnor/ros2_ws/src/cibnor_sim': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cibnor_sim build --build-base /home/cibnor/ros2_ws/build/cibnor_sim/build install --record /home/cibnor/ros2_ws/build/cibnor_sim/install.log --single-version-externally-managed install_data
+[1.233s] running egg_info
+[1.233s] writing ../../build/cibnor_sim/cibnor_sim.egg-info/PKG-INFO
+[1.234s] writing dependency_links to ../../build/cibnor_sim/cibnor_sim.egg-info/dependency_links.txt
+[1.234s] writing entry points to ../../build/cibnor_sim/cibnor_sim.egg-info/entry_points.txt
+[1.234s] writing requirements to ../../build/cibnor_sim/cibnor_sim.egg-info/requires.txt
+[1.234s] writing top-level names to ../../build/cibnor_sim/cibnor_sim.egg-info/top_level.txt
+[1.236s] reading manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+[1.447s] writing manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+[1.447s] running build
+[1.447s] running build_py
+[1.447s] running install
+[1.448s] running install_lib
+[1.449s] running install_data
+[1.450s] copying resource/cibnor_lidar_sensor.urdf -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+[1.452s] running install_egg_info
+[1.454s] removing '/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info' (and everything under it)
+[1.457s] Copying ../../build/cibnor_sim/cibnor_sim.egg-info to /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info
+[1.459s] running install_scripts
+[1.479s] Installing obstacle_avoider script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+[1.481s] Installing odometry_publisher script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+[1.482s] Installing robot_driver script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+[1.482s] writing list of installed files to '/home/cibnor/ros2_ws/build/cibnor_sim/install.log'
+[1.502s] Invoked command in '/home/cibnor/ros2_ws/src/cibnor_sim' returned '0': PYTHONPATH=/home/cibnor/ros2_ws/build/cibnor_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cibnor_sim build --build-base /home/cibnor/ros2_ws/build/cibnor_sim/build install --record /home/cibnor/ros2_ws/build/cibnor_sim/install.log --single-version-externally-managed install_data
