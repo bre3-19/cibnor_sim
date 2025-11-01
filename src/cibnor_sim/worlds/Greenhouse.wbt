@@ -14,16 +14,16 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.4474729015867238 0.6877371328374482 0.5716516758149882 1.699877463149243
-  position -2.4775078529000414 -4.010451752220566 69.03556471278173
+  orientation 0.6706917044970018 -0.29683615323957285 -0.679750642257026 3.810564085802927
+  position 3.4048438676594084 9.44468748110802 21.786618941915354
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 DEF robot Robot {
-  translation 1.57749 12.1743 1.42695
-  rotation -0.023082992591734006 -0.9624836911000526 0.270355913231852 0.0103724
+  translation 1.58588 12.1742 0.586989
+  rotation -0.023082992591734002 -0.9624836911000525 0.270355913231852 0.010372400000010816
   children [
     DEF lidar Lidar {
       translation 0 0 0.2
@@ -471,9 +471,84 @@ DEF robot Robot {
   }
   controller "<extern>"
 }
-Pose {
+DEF terrain Pose {
   rotation 0 1 0 0
   children [
+    DEF plant_area Solid {
+      translation 3.2 6.64 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.6 0.1
+            metalness 0
+          }
+          geometry Box {
+            size 5 10 0.03
+          }
+        }
+      ]
+      name "plant_area1"
+    }
+    DEF plant_area Solid {
+      translation 8.7 6.64 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.6 0.1
+            metalness 0
+          }
+          geometry Box {
+            size 5 10 0.03
+          }
+        }
+      ]
+      name "plant_area2"
+    }
+    DEF plant_area Solid {
+      translation 14.2 6.64 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.6 0.1
+            metalness 0
+          }
+          geometry Box {
+            size 5 10 0.03
+          }
+        }
+      ]
+      name "plant_area3"
+    }
+    DEF plant_area Solid {
+      translation 19.7 6.64 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.6 0.1
+            metalness 0
+          }
+          geometry Box {
+            size 5 10 0.03
+          }
+        }
+      ]
+      name "plant_Area4"
+    }
+    DEF plant_area Solid {
+      translation 25.2 6.64 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.1 0.6 0.1
+            metalness 0
+          }
+          geometry Box {
+            size 5 10 0.03
+          }
+        }
+      ]
+      name "plant_area5"
+    }
     DEF terrain Solid {
       translation 0.2 0.14 0
       children [
