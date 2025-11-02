@@ -11,7 +11,6 @@ import numpy as np
 from scipy.spatial.transform import Rotation as R
 
 HALF_DISTANCE_BETWEEN_WHEELS = 0.25
-EPSILON = 0.01
 WHEEL_RADIUS = 0.175
 
 class OdometryPublisher(Node):
@@ -49,7 +48,7 @@ class OdometryPublisher(Node):
         self.prev_pos_motor_right = self.joint_states.position[1]
 
         v_x = (WHEEL_RADIUS/2)*(vel_motor_left + vel_motor_right)
-        theta_dot = (WHEEL_RADIUS/(2*(HALF_DISTANCE_BETWEEN_WHEELS + EPSILON)))*(vel_motor_right - vel_motor_left)
+        theta_dot = (WHEEL_RADIUS/(2*HALF_DISTANCE_BETWEEN_WHEELS))*(vel_motor_right - vel_motor_left)
 
         return v_x, theta_dot
 
@@ -82,7 +81,7 @@ class OdometryPublisher(Node):
         t.transform.rotation.z = quat[2]
         t.transform.rotation.w = quat[3]
 
-        self.tf_broadcaster.sendTransform(t)
+        #self.tf_broadcaster.sendTransform(t)
 
         self.odometry.header.stamp = self.get_clock().now().to_msg()
         self.odometry.header.frame_id = 'odom'
@@ -96,6 +95,9 @@ class OdometryPublisher(Node):
         self.odometry.pose.pose.orientation.y = quat[1]
         self.odometry.pose.pose.orientation.z = quat[2]
         self.odometry.pose.pose.orientation.w = quat[3]
+
+        self.odometry.twist.twist.linear.x = v_x
+        self.odometry.twist.twist.angular.z = theta_dot
 
         self.odom_publisher.publish(self.odometry)
 

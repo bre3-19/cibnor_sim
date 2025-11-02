@@ -1,7 +1,9 @@
+/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/ekf_node.py
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/webots_robot_driver.py
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/webots_obstacle_avoider.py
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__init__.py
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/odometry_publisher.py
+/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__pycache__/ekf_node.cpython-310.pyc
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__pycache__/webots_robot_driver.cpython-310.pyc
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__pycache__/webots_obstacle_avoider.cpython-310.pyc
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim/__pycache__/__init__.cpython-310.pyc
@@ -13,6 +15,7 @@
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_lidar_launch.py
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_odometry_launch.py
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_rviz_launch.py
+/home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch/robot_sensor_fusion_launch.py
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds/Greenhouse.wbt
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/worlds/wheel.stl
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/urdf_view.rviz
@@ -29,6 +32,7 @@
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info/entry_points.txt
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info/requires.txt
+/home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim/ekf_node
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim/obstacle_avoider
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim/odometry_publisher
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim/robot_driver

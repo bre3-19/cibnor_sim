@@ -9,6 +9,7 @@ setup.py
 ../../build/cibnor_sim/cibnor_sim.egg-info/top_level.txt
 ../../build/cibnor_sim/cibnor_sim.egg-info/zip-safe
 cibnor_sim/__init__.py
+cibnor_sim/ekf_node.py
 cibnor_sim/odometry_publisher.py
 cibnor_sim/webots_obstacle_avoider.py
 cibnor_sim/webots_robot_driver.py
@@ -18,6 +19,7 @@ launch/robot_launch.py
 launch/robot_lidar_launch.py
 launch/robot_odometry_launch.py
 launch/robot_rviz_launch.py
+launch/robot_sensor_fusion_launch.py
 resource/cibnor_lidar_sensor.urdf
 resource/cibnor_sim
 resource/cibnor_sim.urdf

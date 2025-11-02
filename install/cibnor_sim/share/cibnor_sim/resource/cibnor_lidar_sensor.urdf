@@ -12,6 +12,17 @@
             </ros>
         </device>
 
+        <plugin type="webots_ros2_driver::Ros2IMU">
+            <enabled>True</enabled>
+            <topicName>/imu/data</topicName>
+            <updateRate>10</updateRate>
+            <alwaysOn>True</alwaysOn>
+            <frameName>imu</frameName>
+            <inertialUnitName>imu</inertialUnitName>
+            <gyroName>gyro</gyroName>
+            <accelerometerName>accelerometer</accelerometerName>
+        </plugin>
+
         <plugin type="cibnor_sim.webots_robot_driver.RobotDriver"/>
     </webots>
 
@@ -84,6 +95,29 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <cylinder radius="0.035" length="0.035"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!--IMU-->
+    <joint name="base_link_to_imu" type="fixed">
+        <parent link="base_link"/>
+        <child link="imu"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="imu">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.022 0.017 0.005"/>
+            </geometry>
+            <material name="light_gray"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.022 0.017 0.005"/>
             </geometry>
         </collision>
     </link>

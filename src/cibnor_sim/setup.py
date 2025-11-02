@@ -11,6 +11,7 @@ data_files.append(('share/' + package_name + '/launch', ['launch/robot_dist_sens
 data_files.append(('share/' + package_name + '/launch', ['launch/robot_lidar_launch.py']))
 data_files.append(('share/' + package_name + '/launch', ['launch/robot_odometry_launch.py']))
 data_files.append(('share/' + package_name + '/launch', ['launch/robot_rviz_launch.py']))
+data_files.append(('share/' + package_name + '/launch', ['launch/robot_sensor_fusion_launch.py']))
 ## World files
 data_files.append(('share/' + package_name + '/worlds', ['worlds/Greenhouse.wbt']))
 data_files.append(('share/' + package_name + '/worlds', ['worlds/wheel.stl']))
@@ -44,6 +45,7 @@ setup(
             'robot_driver = cibnor_sim.webots_robot_driver:main',
             'obstacle_avoider = cibnor_sim.webots_obstacle_avoider:main',
             'odometry_publisher = cibnor_sim.odometry_publisher:main',
+            'ekf_node = cibnor_sim.ekf_node:main',
         ],
     },
 )
