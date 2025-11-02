@@ -8,6 +8,9 @@ WorldInfo {
     ContactProperties {
       material1 "wheel_Texture"
       material2 "ground_Texture"
+      coulombFriction [
+        2
+      ]
       bounce 0
       softCFM 1e-05
     }

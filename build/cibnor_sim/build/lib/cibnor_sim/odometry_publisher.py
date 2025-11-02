@@ -43,6 +43,7 @@ class OdometryPublisher(Node):
 
     def get_robot_speed(self):
 
+        # USANDO COMO REFERENCIA LAS 2 RUEDAS TRASERAS, SIENDO QUE LAS POSICIONES DE ESTAS ESTAN EN [1] Y [3]
         vel_motor_left = (self.joint_states.position[0] - self.prev_pos_motor_left)/self.dt
         vel_motor_right = (self.joint_states.position[1] - self.prev_pos_motor_right)/self.dt
 
@@ -85,7 +86,7 @@ class OdometryPublisher(Node):
         t.transform.rotation.z = quat[2]
         t.transform.rotation.w = quat[3]
 
-        #self.tf_broadcaster.sendTransform(t)
+        self.tf_broadcaster.sendTransform(t)
 
         ## Odometry message
         self.odometry.header.stamp = self.get_clock().now().to_msg()
@@ -101,8 +102,8 @@ class OdometryPublisher(Node):
         self.odometry.pose.pose.orientation.z = quat[2]
         self.odometry.pose.pose.orientation.w = quat[3]
 
-        self.odometry.twist.twist.linear.x = v_x
-        self.odometry.twist.twist.angular.z = theta_dot
+        #self.odometry.twist.twist.linear.x = v_x
+        #self.odometry.twist.twist.angular.z = theta_dot
 
         self.odom_publisher.publish(self.odometry)
 
