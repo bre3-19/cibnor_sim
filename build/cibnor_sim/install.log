@@ -24,6 +24,8 @@
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/robot_dist_sensor.urdf
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/cibnor_sim.urdf
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/cibnor_lidar_sensor.urdf
+/home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/slam.rviz
+/home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource/slam_toolbox_params.yaml
 /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/package.xml
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info/zip-safe
 /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info/dependency_links.txt

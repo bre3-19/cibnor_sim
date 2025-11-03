@@ -26,6 +26,8 @@ resource/cibnor_sim.urdf
 resource/lidar_scan.rviz
 resource/robot.urdf
 resource/robot_dist_sensor.urdf
+resource/slam.rviz
+resource/slam_toolbox_params.yaml
 resource/urdf_view.rviz
 test/test_copyright.py
 test/test_flake8.py

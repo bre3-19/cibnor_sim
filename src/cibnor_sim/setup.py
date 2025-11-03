@@ -22,6 +22,8 @@ data_files.append(('share/' + package_name + '/resource', ['resource/robot.urdf'
 data_files.append(('share/' + package_name + '/resource', ['resource/robot_dist_sensor.urdf']))
 data_files.append(('share/' + package_name + '/resource', ['resource/cibnor_sim.urdf']))
 data_files.append(('share/' + package_name + '/resource', ['resource/cibnor_lidar_sensor.urdf']))
+data_files.append(('share/' + package_name + '/resource', ['resource/slam.rviz']))
+data_files.append(('share/' + package_name + '/resource', ['resource/slam_toolbox_params.yaml']))
 data_files.append(('share/' + package_name, ['package.xml']))
 
 setup(

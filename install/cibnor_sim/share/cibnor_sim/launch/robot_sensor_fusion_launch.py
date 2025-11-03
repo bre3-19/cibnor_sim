@@ -34,6 +34,11 @@ def generate_launch_description():
         }],
         arguments=[robot_description_path],
     )
+    lidar_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0', '0', '0.2', '0', '0', '0', 'base_link', 'lidar'],
+    )
     joint_state_publisher = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
@@ -52,6 +57,12 @@ def generate_launch_description():
         executable='rviz2',
         output='screen',
         arguments=['--display-config=' + rviz2_config_path],
+        remappings=[('/map', '/map'),
+                    ('/tf', '/tf'),
+                    ('/tf_static', '/tf_static'),
+                    ('/goal_pose', '/goal_pose'),
+                    ('/clicked_point', '/clicked_point'),
+                    ('/initialpose', '/initialpose')],
     )
 
     ## Sensor Fusion
@@ -63,7 +74,18 @@ def generate_launch_description():
                              0.0,0.01,0.0,
                              0.0,0.0,0.8]},
             {'sensor_noise': 0.001}
-        ]
+        ],
+        remappings=[('/filtered_odom', '/odom')],
+    )
+
+    toolbox_params = os.path.join(package_dir, 'resource', 'slam_toolbox_params.yaml')
+    slam_toolbox = Node(
+        parameters=[toolbox_params,
+                    {'use_sim_time': True}],
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen'
     )
 
     ## Webots and Robot Nodes
@@ -80,14 +102,14 @@ def generate_launch_description():
     return LaunchDescription([
         webots,
         robot_driver,
-        
+        lidar_tf,
         footprint_publisher,
         robot_state_publisher,
         joint_state_publisher,
         odometry_publisher,
-
         rviz2,
         sensor_fusion,
+        slam_toolbox,
         launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=webots,
