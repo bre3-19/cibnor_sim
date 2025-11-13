@@ -2,6 +2,8 @@ import os
 import launch
 from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
+from launch.actions import IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 from webots_ros2_driver.webots_launcher import WebotsLauncher
 from webots_ros2_driver.webots_controller import WebotsController
@@ -88,6 +90,12 @@ def generate_launch_description():
         output='screen'
     )
 
+    ## Navigation
+    nav2_bringup_path = get_package_share_directory('nav2_bringup')
+    navigation = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(nav2_bringup_path, 'launch', 'navigation_launch.py'))
+    )
+
     ## Webots and Robot Nodes
     webots = WebotsLauncher(
         world=os.path.join(package_dir, 'worlds', 'Greenhouse.wbt'),
@@ -110,6 +118,7 @@ def generate_launch_description():
         rviz2,
         sensor_fusion,
         slam_toolbox,
+        navigation,
         launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=webots,

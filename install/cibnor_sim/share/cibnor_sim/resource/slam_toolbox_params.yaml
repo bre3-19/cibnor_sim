@@ -20,7 +20,7 @@ slam_toolbox:
         map_frame: /map
         base_frame: base_link
         scan_topic: /scan
-        mode: mapping #localization
+        mode: localization #mapping #localization
 
         debug_logging: false
         throttle_scans: 1

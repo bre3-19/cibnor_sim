@@ -24,6 +24,7 @@ resource/cibnor_lidar_sensor.urdf
 resource/cibnor_sim
 resource/cibnor_sim.urdf
 resource/lidar_scan.rviz
+resource/navigation.rviz
 resource/robot.urdf
 resource/robot_dist_sensor.urdf
 resource/slam.rviz

@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/cibnor_sim/cibnor_sim.egg-info/PKG-INFO
+writing dependency_links to ../../build/cibnor_sim/cibnor_sim.egg-info/dependency_links.txt
+writing entry points to ../../build/cibnor_sim/cibnor_sim.egg-info/entry_points.txt
+writing requirements to ../../build/cibnor_sim/cibnor_sim.egg-info/requires.txt
+writing top-level names to ../../build/cibnor_sim/cibnor_sim.egg-info/top_level.txt
+reading manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+writing manifest file '../../build/cibnor_sim/cibnor_sim.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/robot_sensor_fusion_launch.py -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/launch
+copying resource/navigation.rviz -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+copying resource/slam_toolbox_params.yaml -> /home/cibnor/ros2_ws/install/cibnor_sim/share/cibnor_sim/resource
+running install_egg_info
+removing '/home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/cibnor_sim/cibnor_sim.egg-info to /home/cibnor/ros2_ws/install/cibnor_sim/lib/python3.10/site-packages/cibnor_sim-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ekf_node script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+Installing obstacle_avoider script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+Installing odometry_publisher script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+Installing robot_driver script to /home/cibnor/ros2_ws/install/cibnor_sim/lib/cibnor_sim
+writing list of installed files to '/home/cibnor/ros2_ws/build/cibnor_sim/install.log'
